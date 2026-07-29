@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+
+# Android build artifacts
+android/webrtc/
+android/libwebrtc-android-*.zip
+
+# iOS build artifacts and source
+ios/webrtc-ios/
+ios/WebRTC.xcframework/
+ios/WebRTC-ios-*.xcframework.zip

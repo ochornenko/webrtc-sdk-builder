@@ -1,0 +1,18 @@
+services:
+  webrtc-builder:
+    platform: linux/amd64
+    image: ubuntu:22.04
+    container_name: webrtc-android-builder
+    tty: true
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    volumes:
+      - ./:/workspace
+      - ${HOME}/Library/Android/sdk/ndk/21.4.7075529:/ndk:ro
+      - webrtc-root-volume:/root/webrtc-android
+    working_dir: /workspace
+    command: /bin/bash
+    
+volumes:
+  webrtc-root-volume:
+  
